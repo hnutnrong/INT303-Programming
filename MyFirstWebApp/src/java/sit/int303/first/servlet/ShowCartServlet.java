@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -32,14 +32,19 @@ public class ShowCartServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
          HttpSession session=request.getSession(false);
+           System.out.println("Servlet show car was done");
          if(session!=null){
             ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
-           
+             System.out.println("Session is NOT null");
          if(cart!=null){
-             session.setAttribute("cart", cart);
+             System.out.println("Cart is not null");
             getServletContext().getRequestDispatcher("/ShowCart.jsp").forward(request,response);
-         }
+                return;
+            }
         }
+         response.sendError(HttpServletResponse.SC_BAD_REQUEST,
+                "Session Timeout .. Try again");
+         //getServletContext().getRequestDispatcher("/index.html").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -80,5 +85,4 @@ public class ShowCartServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }
