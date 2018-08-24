@@ -6,7 +6,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+    <div class="container-fluid" style="background-color: ${cookie.bgColor.value}">
         <table class="table">
                 <tr>
                     <td><a href="index.html" title="Back to Home"><img src="logo.png" width="150"/></a></td>
@@ -28,3 +28,7 @@
                     </td>
                 </tr>
         </table>
+    </div>
+                    <hr>
+                    Session Id:${cookie.JSESSIONID.value}
+                    <hr>
