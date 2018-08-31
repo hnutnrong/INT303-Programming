@@ -34,9 +34,9 @@
                 </thead>
                 <c:forEach items="${products}" var="p" varStatus="vs">
                     <tr>
-                        <td><img src="model-images/${p.productCode}.jpg" width="120"</td>
-                        <td>${vs.count}</td>  <!count เริ่มนับจาก1>
-                    <td>${p.productCode}</td>
+                    <td><img src="model-images/${p.productCode}.jpg" width="120"</td>
+                    <td>${vs.count}</td>  <!count เริ่มนับจาก1>
+                    <td><a href="GetProduct?productCode=${p.productCode}">${p.productCode}</a></td>
                     <td>${p.productName}</td>
                     <td>${p.productLine}</td>
                     <td>${p.productScale}</td>
