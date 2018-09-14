@@ -20,6 +20,12 @@
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
     </filter-mapping>
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <servlet-name>ChooseBackgroundServlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
     <servlet>
         <servlet-name>SimpleCalculaterServlet</servlet-name>
         <servlet-class>sit.int303.first.servlet.SimpleCalculaterServlet</servlet-class>
