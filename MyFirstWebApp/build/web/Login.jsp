@@ -19,12 +19,12 @@
                 <table class="table">
                     <tr>
                         <td>User Name:</td>
-                        <td><input type="number" name ="userName" required/></td>                        
+                        <td><input type="password" name ="userName" required/></td>                        
                     </tr>
 
                     <tr>
                         <td>Password:</td>
-                        <td><input type="number" name="password" required/></td>                     
+                        <td><input type="password" name="password" required/></td>                     
                     </tr>
 
                     <tr>
